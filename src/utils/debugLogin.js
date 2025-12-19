@@ -5,7 +5,7 @@ export const debugLogin = async (email, password) => {
   // Test 1: Basic fetch to backend
   try {
     console.log('📡 Test 1: Basic backend connectivity');
-    const response = await fetch('http://localhost:5000');
+    const response = await fetch('https://ovenaura-server.onrender.com');
     const data = await response.json();
     console.log('✅ Backend is running:', data);
   } catch (error) {
@@ -16,7 +16,7 @@ export const debugLogin = async (email, password) => {
   // Test 2: Direct fetch to login endpoint
   try {
     console.log('📡 Test 2: Direct login API call');
-    const response = await fetch('http://localhost:5000/api/auth/login', {
+    const response = await fetch('https://ovenaura-server.onrender.com/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

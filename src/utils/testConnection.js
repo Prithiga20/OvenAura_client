@@ -5,11 +5,11 @@ export const testConnection = async () => {
     console.log('🔄 Testing connection to backend...');
     
     // Test basic connection
-    const response = await axios.get('http://localhost:5000');
+    const response = await axios.get('https://ovenaura-server.onrender.com');
     console.log('✅ Backend is running:', response.data);
     
     // Test auth endpoint
-    const authTest = await axios.post('http://localhost:5000/api/auth/login', {
+    const authTest = await axios.post('https://ovenaura-server.onrender.com/api/auth/login', {
       email: 'test@test.com',
       password: 'test123'
     });
