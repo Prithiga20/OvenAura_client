@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const API_URL = 'http://localhost:5000';
+export const API_URL = 'https://ovenaura-server.onrender.com';
 
-const baseURL = 'http://localhost:5000/api';
+const baseURL = 'https://ovenaura-server.onrender.com/api';
 
 const api = axios.create({
   baseURL,
@@ -45,12 +45,12 @@ api.interceptors.response.use(
 // Test connectivity function
 export const testBackendConnection = async () => {
   try {
-    console.log('🔄 Testing backend connection to: http://localhost:5000/api/health');
+    console.log('🔄 Testing backend connection to: https://ovenaura-server.onrender.com/api/health');
     
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
     
-    const response = await fetch('http://localhost:5000/api/health', {
+    const response = await fetch('https://ovenaura-server.onrender.com/api/health', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

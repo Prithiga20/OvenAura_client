@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
         
         // Fallback to direct fetch
         try {
-          const directURL = import.meta.env.DEV ? '/api/auth/login' : 'http://localhost:5000/api/auth/login';
+          const directURL = import.meta.env.DEV ? '/api/auth/login' : 'https://ovenaura-server.onrender.com/api/auth/login';
           const fetchResponse = await fetch(directURL, {
             method: 'POST',
             headers: {

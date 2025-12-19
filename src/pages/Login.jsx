@@ -29,7 +29,7 @@ const Login = () => {
       } else {
         console.log('❌ Backend is disconnected');
         setBackendStatus('disconnected');
-        toast.error('Backend server is not reachable at http://localhost:5000');
+        toast.error('Backend server is not reachable at https://ovenaura-server.onrender.com');
         
         // Retry after 3 seconds
         setTimeout(() => {
